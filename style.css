@@ -1,0 +1,186 @@
+body {
+    background: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: Arial;
+}
+
+.cont {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(2, 50px);
+    gap: 15px;
+
+}
+
+.cont .btn {
+    width: 80px;
+    height: 30px;
+    border-radius: 7px;
+    background: rgb(27, 167, 109);
+    transition: 300ms ease-in-out;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #1f1f1f;
+    font-weight: bold;
+    font-size: 12px;
+    justify-content: center;
+}
+
+.button1:hover {
+    border-bottom: 4px solid #fff;
+}
+
+.button2:hover {
+    filter: blur(.2em);
+}
+
+.button3:hover {
+    box-shadow: 0 0 30px #fff,
+        0 0 30px #fff;
+}
+
+.button3:hover {
+    box-shadow: 0 0 30px rgb(4, 124, 48),
+        0 0 30px rgb(255, 255, 255);
+}
+
+.button4:hover {
+    scale: 1.05;
+}
+
+.button5:hover {
+    border-left: 4px solid #fff;
+
+}
+
+div .button5 {
+
+    border-top: 4px;
+    border-bottom: 4px;
+}
+
+.button6 {
+    border: 2px solid rgba(255, 255, 255, 0);
+}
+
+.button6:hover {
+    border-color: #fff;
+}
+
+.button8 {
+    position: relative;
+    border-width: 0px;
+}
+
+.button8::before {
+    content: "";
+    background: #1f178e;
+    position: absolute;
+    border-radius: inherit;
+    padding: inherit;
+    left: 0;
+    transition: 300ms ease-in-out;
+    top: 0;
+    width: 0%;
+    height: 100%;
+
+}
+
+.button8::after {
+    content: "Hover Me";
+    position: absolute;
+    color: #fff;
+    border-radius: inherit;
+    padding: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    transition: 300ms ease-in-out;
+    top: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+
+}
+
+.button8:hover::before {
+    /* background: white; */
+    width: 100%;
+}
+
+.button8:hover::after {
+    opacity: 1;
+}
+
+
+
+.button9 {
+    position: relative;
+}
+
+.button9::before {
+    content: "";
+    background: #1f178e;
+    position: absolute;
+    border-radius: inherit;
+    padding: inherit;
+    left: 0;
+    transition: 300ms ease-in-out;
+    bottom: 0;
+    width: 100%;
+    height: 0%;
+}
+
+.button9::after {
+    content: "Hover Me";
+    position: absolute;
+    color: #fff;
+    border-radius: inherit;
+    padding: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    transition: 300ms ease-in-out;
+    top: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+
+}
+
+.button9:hover::before {
+    /* background: white; */
+    height: 100%;
+}
+
+.button9:hover::after {
+    opacity: 1;
+}
+
+.button7 {
+    position: relative;
+}
+
+.glow-hover {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    z-index: 10;
+    opacity: 0;
+    grid-template: 20px;
+    left: 0;
+    border-radius: 50px;
+    filter: blur(3px);
+    top: 0;
+    background: rgba(255, 255, 255, 0.559);
+}
+
+.glow-hover[isHover="true"] {
+   opacity: 1;
+}
